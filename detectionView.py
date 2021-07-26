@@ -5,7 +5,7 @@ import numpy as np
 desktop = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop')
 desktop+='/projevid/test_v.mp4'
 
-esik_degeri=180
+limit_val=180
 
 
 
@@ -29,7 +29,7 @@ def control():
                     r, g, b = frame2[x, y]
                     F = g - 0.5 * r - 0.5 * b
                     if ((F < -10) or (F > 110)) and (
-                            r > g):  # (r==0 and g==0 and b==255): #(F > esik_degeri or F < -10) and (r != 255 and g != 255 and b != 255)and (r != 0 and g != 0 and b != 0):
+                            r > g):  # (r==0 and g==0 and b==255): #(F > limit_val or F < -10) and (r != 255 and g != 255 and b != 255)and (r != 0 and g != 0 and b != 0):
                         frame2[x, y] = [255, 0, 0]
 
             # Display the resulting frame
@@ -42,7 +42,7 @@ def control():
     # When everything done, release the capture
     cap.release()
     cv2.destroyAllWindows()
-    return "Process Successfully Done."
+    return "Process Sucessfully Done."
 
 
 """
@@ -59,7 +59,7 @@ def control():
 
 """
 
-def goruntu_al():
+def taken_view():
     url = ('http://192.168.0.13:8080/video')
 
     cam = cv2.VideoCapture(url)
@@ -78,7 +78,7 @@ while True:
 
     try:
         #detector()
-        goruntu_al()
+        taken_view()
     except:
         motor_calisma.dur()
 
