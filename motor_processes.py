@@ -6,7 +6,7 @@ def calis():
 import urllib.request,time,http.client,cv2
 
 def calistir():
-    print("calisti")
+    #print("started")
     urllib.request.urlopen("http://192.168.0.23/forward") # send request to ESP
     time.sleep(1)
     dur()
