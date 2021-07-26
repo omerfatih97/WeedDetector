@@ -8,7 +8,7 @@ def set_limit_val(val):
 
 
 def control(img):
-        say=0
+        count=0
         for x in range(0, 120):  # (160,480) :
             for y in range(120, 240):  # (120,360):
                 r, g, b = img[x, y]
