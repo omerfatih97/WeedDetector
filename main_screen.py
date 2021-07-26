@@ -114,8 +114,8 @@ def view_Detection(label):
 def spray_wildPlant(label):
     if is_choosen==True:
         import weedSpray as deneme
-        deneme.set_deger(selected_value)
-        deneme.islem("ilac")
+        deneme.set_limit_val(selected_value)
+        deneme.choosen_action("insecticide")
     else:
         messagebox.showerror("Error", " Please Choose Product!!! ")
 
