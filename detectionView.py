@@ -42,7 +42,7 @@ def control():
     # When everything done, release the capture
     cap.release()
     cv2.destroyAllWindows()
-    return "Görüntü Tamamlandı veya Islem Bitti."
+    return "Process Successfully Done."
 
 
 """
